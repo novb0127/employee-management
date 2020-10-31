@@ -64,3 +64,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
 gem 'fullcalendar-rails'
 gem 'momentjs-rails'
+gem 'haml-rails'
+gem 'erb2haml'

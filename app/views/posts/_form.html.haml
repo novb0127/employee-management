@@ -1,0 +1,24 @@
+= form_with(model: post, local: true) do |form|
+  - if post.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(post.errors.count, "error")
+        prohibited this post from being saved:
+      %ul
+        - post.errors.full_messages.each do |message|
+          %li= message
+  .field
+    = form.label :名前
+    = form.text_field :名前
+  　
+  .field
+    = form.label :日当
+    = form.text_area :日当
+  .field
+    = form.label :手当て
+    = form.text_area :手当て
+  .field
+    = form.label :備考
+    = form.text_area :備考
+  .actions
+    = form.submit
